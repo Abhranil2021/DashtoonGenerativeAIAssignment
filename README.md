@@ -10,8 +10,27 @@ The process involves training a feedforward network that applies artistic styles
 
 ## Requirements
 
+The following Python libraries are needed to ensure that the notebook runs smoothly
 
+numpy==1.23.5 \
+tensorflow==2.14.0 \
+PIL==9.4.0 \ 
+matplotlib==3.7.1 \
+requests==2.31.0 \
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install requirements.txt.
+
+```bash
+pip install -r requirements.txt
+```
+
+Download the dataset from Google Drive link: [NeuralStyleTransfer](https://drive.google.com/file/d/15IF18bDscAVg8eAta6PGtKYmLEta-Ofd/view?usp=sharing)
 
 ## Usage
+
+Clone the repository, download the dataset from the link given above, extract the dataset from the zip file into the same folder as the project, and run the Jupyter notebook attached with the project. A model checkpoint is provided in this repo for instant inference without training (nst_model_weights).
+
+## Limitations
+
 
 ## References
