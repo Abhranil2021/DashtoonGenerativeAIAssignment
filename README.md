@@ -8,6 +8,20 @@ Introduced by Gatys et. al, Neural Style Transfer is an optimization technique f
 
 The process involves training a feedforward network that applies artistic styles to images, utilizing the loss function outlined in Gatys et al's paper. The feedforward network, functioning as a residual autoencoder, takes a content image as input and generates a stylized output. Additionally, the model incorporates instance normalization instead of batch normalization, as suggested in the paper titled *Instance Normalization: The Missing Ingredient for Fast Stylization*. Training is carried out using perceptual loss, as defined in the paper *Perceptual Losses for Real-Time Style Transfer and Super-Resolution*. The VGG19 model is employed to calculate perceptual loss, with further details provided in the associated paper.
 
+For example, using Neural Style Transfer the image of a dog painted in the style of Wassily Kandinsky's Composition 7 is generated, given below:
+
+<img src="https://storage.googleapis.com/download.tensorflow.org/example_images/YellowLabradorLooking_new.jpg" width="500px"/>
+
+[Picture of a Yellow Labrador](https://commons.wikimedia.org/wiki/File:YellowLabradorLooking_new.jpg)
+
+<img src="https://storage.googleapis.com/download.tensorflow.org/example_images/Vassily_Kandinsky%2C_1913_-_Composition_7.jpg" width="500px"/>
+
+[Wassily Kandinsky's Composition 7](https://commons.wikimedia.org/wiki/File:Vassily_Kandinsky,_1913_-_Composition_7.jpg)
+
+<img src="https://tensorflow.org/tutorials/generative/images/stylized-image.png" style="width: 500px;"/>
+
+Image Generated Using Neural Style Transfer
+
 ## Requirements
 
 The following Python libraries are needed to ensure that the notebook runs smoothly
@@ -32,5 +46,5 @@ Clone the repository, download the dataset from the link given above, extract th
 
 ## Limitations
 
-
-## References
+1) The approach by Gatys et. al, while being slower, can accomodate multiple style images. The encoder-decoder architecture is capable of accommodating only one style for one set of encoder-decoder weights.
+2) Due to limited computational resources, artifacting is seen in the generated images. Training for more epochs may be a solution.
